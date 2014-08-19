@@ -1,6 +1,7 @@
 "use strict";
 
 var path = require('path');
+var npmName = require('npm-name');
 var yeoman = require('yeoman-generator');
 
 module.exports = yeoman.generators.Base.extend({
@@ -15,29 +16,53 @@ module.exports = yeoman.generators.Base.extend({
     },
     askForModuleName: function () {
         var done = this.async();
-        var prompts = [
-            {
-                name: 'name',
-                message: 'Module Name',
-                default: path.basename(process.cwd())
-            }
-        ];
 
-        var g = this;
+        var prompts = [{
+            name: 'name',
+            message: 'Module Name',
+            default: path.basename(process.cwd())
+        }, {
+            type: 'confirm',
+            name: 'pkgName',
+            message: 'The name above already exists on npm, choose another?',
+            default: true,
+            when: function(answers) {
+                var done = this.async();
+
+                npmName(answers.name, function (err, available) {
+                    if (!available) {
+                        done(true);
+                    }
+
+                    done(false);
+                }.bind(this));
+            }
+        }];
+
         this.prompt(prompts, function (props) {
-            g.slugname = g._.slugify(props.name);
-            g.safeSlugname = g.slugname.replace(/-+([a-zA-Z0-9])/g, function (g) {
-                    return g[1].toUpperCase();
-                }
+            if (props.pkgName) {
+                return this.askForModuleName();
+            }
+
+            this.slugname = this._.slugify(props.name);
+            this.safeSlugname = this.slugname.replace(
+                /-+([a-zA-Z0-9])/g,
+                function (g) { return g[1].toUpperCase(); }
             );
+
             done();
-        });
+        }.bind(this));
     },
 
     askFor: function () {
         var done = this.async();
 
         var prompts = [
+            {
+                name: 'version',
+                message: 'Module Version',
+                default: '0.1.0'
+            },
             {
                 name: 'description',
                 message: 'Description',
@@ -140,7 +165,7 @@ module.exports = yeoman.generators.Base.extend({
         this.template('lib/_name.js', 'lib/' + this.slugname + '.js');
         this.assertionGuide = this.readFileAsString(path.join(this.sourceRoot(), '/test/_' + this._.slugify(this.props.assertionLib) + '.js'));
         this.mkdir('test');
-        this.template('test/_name_test.js', 'test/' + this.slugname + '_test.js');
+        this.template('test/_name.test.js', 'test/' + this.slugname + '.test.js');
         this.mkdir('example');
         this.template('example/_name_example.js', 'example/' + this.slugname + '_example.js');
     },

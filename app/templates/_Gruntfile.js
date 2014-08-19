@@ -12,12 +12,8 @@ module.exports = function (grunt) {
     mochaTest: {
       options: {
         reporter: '<%= props.reporter %>',
-        <% if(props.assertionLib==='assert' || props.assertionLib==='chai-assert' ){ %>
-        ui: 'tdd'
-        <% } else { %>
         ui: 'bdd'
-        <% } %>
-      }, 
+      },
       test: {
         src: ['test/**/*.js']
       }

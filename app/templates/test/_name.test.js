@@ -1,6 +1,6 @@
 'use strict';
 
-var <%= slugname %> = require('../lib/<%= slugname %>.js');
+var <%= safeSlugname %> = require('../lib/<%= slugname %>.js');
 
 
 <%= assertionGuide %>
@@ -12,7 +12,7 @@ var assert = require('assert');
 
 describe('AwesomenessTest', function(){
   it('#awesome()', function(done){
-    assert.equal(<%= slugname %>.awesome(), 'awesome');
+    assert.equal(<%= safeSlugname %>.awesome(), 'awesome');
     done();
   });
   it('is pending implementation');
@@ -24,7 +24,7 @@ var assert = require('chai').assert;
 
 describe('AwesomenessTest', function(){
   it('#awesome()', function(done){
-    assert.equal(<%= slugname %>.awesome(), 'awesome');
+    assert.equal(<%= safeSlugname %>.awesome(), 'awesome');
     done();
   });
   it('is pending implementation');
@@ -36,7 +36,7 @@ var expect = require('chai').expect;
 
 describe('AwesomenessTest', function () {
   it('should return awesome from #awesome()', function () {
-    expect(<%= slugname %>.awesome()).to.equal('awesome');
+    expect(<%= safeSlugname %>.awesome()).to.equal('awesome');
   });
   it('is pending implementation');
 });
@@ -55,7 +55,7 @@ describe('Should Assertion Test', function () {
 
 describe('AwesomenessTest', function () {
   it('should return awesome from #awesome()', function () {
-    <%= slugname %>.awesome().should.equal('awesome');
+    <%= safeSlugname %>.awesome().should.equal('awesome');
   });
   it('is pending implementation');
 });
@@ -66,7 +66,7 @@ var expect = require('expect.js');
 
 describe('AwesomenessTest', function () {
   it('should return awesome from #awesome()', function () {
-    expect(<%= slugname %>.awesome()).to.equal('awesome');
+    expect(<%= safeSlugname %>.awesome()).to.equal('awesome');
   });
   it('is pending implementation');
 });
@@ -85,7 +85,7 @@ describe('Should Assertion Test', function () {
 
 describe('AwesomenessTest', function(){
   it('should return awesome from #awesome()', function(done){
-    <%= slugname %>.awesome().should.equal('awesome');
+    <%= safeSlugname %>.awesome().should.equal('awesome');
     done();
   });
   it('is pending implementation');

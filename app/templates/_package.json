@@ -1,6 +1,6 @@
 {
   "name": "<%= slugname %>",
-  "version": "0.0.0",
+  "version": "<%= props.version %>",
   "main": "lib/<%= slugname %>.js",
   "description": "<%= props.description %>",<% if (props.homepage) { %>
   "homepage": "<%= props.homepage %>",<% } %>
@@ -27,6 +27,7 @@
     "<%= keywords[i] %>"<% } %>
   ],
   "devDependencies": {
+    "mocha": "^1.21.4",
     <% if(props.assertionLib==='chai-assert' || props.assertionLib==='chai-expect' || props.assertionLib==='chai-should'){ %>
     "chai": "*",
     <% } else if(props.assertionLib==='expect.js'){ %>
@@ -36,10 +37,10 @@
     <% } %>
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-mocha-test": "~0.7.0",
-    "jshint-stylish": "^0.2.0",
-    "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "~0.3.1" <% if (props.browser === "yes") { %> ,
+    "grunt-mocha-test": "~0.11.0",
+    "jshint-stylish": "^0.4.0",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "~0.4.0" <% if (props.browser === "yes") { %> ,
     "browserify": "^4.1.3" <% } %>
   },
   "scripts": {
