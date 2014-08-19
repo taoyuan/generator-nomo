@@ -21,6 +21,7 @@ The prompts are:
 
 ```
 Module Name:
+Module Version:
 Description:
 Homepage:
 License:
@@ -28,17 +29,20 @@ GitHub username:
 Author's Name:
 Author's Email:
 Author's Homepage:
+Key your keywords:
+Do you need cli tools?
+Do you need browserify?
 Which Mocha reporter would you like to use?:
 Which assertion library would you like to use?:
 ```
 
 
 ## Credits
-This generator is a fork of [generator-node-mocha](https://github.com/yeoman/generator-node) (supporting Mocha unit tests instead of NodeUnit) which is in turn a fork of [generator-node](https://github.com/yeoman/generator-node) by the Yeoman team.
+This generator is a fork of [generator-node-mocha](https://github.com/MrDHat/generator-node-mocha) (supporting Mocha unit tests instead of NodeUnit) which is in turn a fork of [generator-node](https://github.com/yeoman/generator-node) by the Yeoman team.
 
 The should.js guide was taken from [grunt-initconfig](https://github.com/pismute/grunt-initconfig/blob/master/src/test/initconfig-test.coffee)
 
-Author: [Brad Denver](https://github.com/taoyuan)
+Author: [Tao Yuan](https://github.com/taoyuan)
 
 Original Authors: [Akshay Katyal](https://github.com/MrDHat), [Addy Osmani](https://github.com/addyosmani)
 
