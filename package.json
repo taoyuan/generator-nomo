@@ -1,0 +1,40 @@
+{
+  "name": "generator-nomo",
+  "version": "0.1.0",
+  "description": "A node generator for Yeoman with Mocha unit tests and choice of assertion library",
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "mocha",
+    "chai",
+    "expect.js",
+    "should.js"
+  ],
+  "homepage": "https://github.com/taoyuan/generator-nomo",
+  "bugs": {
+    "url": "https://github.com/taoyuan/generator-nomo/issues"
+  },
+  "author": "Tao Yuan <torworx@gmail.com> (https://github.com/taoyuan)",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taoyuan/generator-nomo.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.17.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.3"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "license": "MIT"
+}

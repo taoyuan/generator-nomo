@@ -1,0 +1,28 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "unused": true,
+  "boss": true,
+  "eqnull": true,
+  "node": true,
+  "globals"   : {
+      <% if(props.assertionLib==='chai-expect' || props.assertionLib==='chai-should' || props.assertionLib==='expect.js' || props.assertionLib==='should.js'){ %>
+      /* chai bdd, expect.js, should.js */
+      "describe": false,
+      "it": false,
+      <% } %>
+      /* MOCHA */
+      "suite": false,
+      "test": false,
+      "before": false,
+      "beforeEach": false,
+      "after": false,
+      "afterEach": false
+    }
+}
