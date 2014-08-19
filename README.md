@@ -48,7 +48,7 @@ The should.js guide was taken from [grunt-initconfig](https://github.com/pismute
 
 Author: [Tao Yuan](https://github.com/taoyuan)
 
-Original Authors: [BradDenver](https://github.com/BradDenver), [Addy Osmani](https://github.com/addyosmani)
+Original Authors: [Brad Denver](https://github.com/BradDenver), [Addy Osmani](https://github.com/addyosmani)
 
 ## License
 
