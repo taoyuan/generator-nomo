@@ -30,8 +30,8 @@ Author's Name:
 Author's Email:
 Author's Homepage:
 Key your keywords:
-Do you need cli tools?
-Do you need browserify?
+Do you need cli tools?:
+Do you need browserify?:
 Which Mocha reporter would you like to use?:
 Which assertion library would you like to use?:
 ```
