@@ -1,8 +1,8 @@
 # Nomo Generator
 
 [![Build Status](https://travis-ci.org/taoyuan/generator-nomo.svg?branch=master)](https://travis-ci.org/taoyuan/generator-nomo)
-[![Dependency Status](https://david-dm.org/taoyuan/generator-nomo.png?theme=shields.io)](https://david-dm.org/taoyuan/generator-nomo)
-[![devDependency Status](https://david-dm.org/taoyuan/generator-nomo/dev-status.png?theme=shields.io)](https://david-dm.org/taoyuan/generator-nomo#info=devDependencies)
+[![Dependency Status](https://david-dm.org/taoyuan/generator-nomo.svg?theme=shields.io)](https://david-dm.org/taoyuan/generator-nomo)
+[![devDependency Status](https://david-dm.org/taoyuan/generator-nomo/dev-status.svg?theme=shields.io)](https://david-dm.org/taoyuan/generator-nomo#info=devDependencies)
 
 > Create a node.js module with [Yeoman](http://yeoman.io/), including Mocha unit tests, with the assertion library of your choice.
 
