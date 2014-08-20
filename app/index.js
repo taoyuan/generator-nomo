@@ -1,7 +1,6 @@
 "use strict";
 
 var path = require('path');
-var npmName = require('npm-name');
 var yeoman = require('yeoman-generator');
 
 module.exports = yeoman.generators.Base.extend({
@@ -21,37 +20,18 @@ module.exports = yeoman.generators.Base.extend({
             name: 'name',
             message: 'Module Name',
             default: path.basename(process.cwd())
-        }, {
-            type: 'confirm',
-            name: 'pkgName',
-            message: 'The name above already exists on npm, choose another?',
-            default: true,
-            when: function(answers) {
-                var done = this.async();
-
-                npmName(answers.name, function (err, available) {
-                    if (!available) {
-                        done(true);
-                    }
-
-                    done(false);
-                }.bind(this));
-            }
         }];
 
+        var self = this;
         this.prompt(prompts, function (props) {
-            if (props.pkgName) {
-                return this.askForModuleName();
-            }
-
-            this.slugname = this._.slugify(props.name);
-            this.safeSlugname = this.slugname.replace(
+            self.slugname = self._.slugify(props.name);
+            self.safeSlugname = self.slugname.replace(
                 /-+([a-zA-Z0-9])/g,
                 function (g) { return g[1].toUpperCase(); }
             );
 
             done();
-        }.bind(this));
+        });
     },
 
     askFor: function () {
@@ -150,6 +130,7 @@ module.exports = yeoman.generators.Base.extend({
         this.copy('gitignore', '.gitignore');
         this.copy('travis.yml', '.travis.yml');
 
+        this.template('_index.js', 'index.js');
         this.template('_Gruntfile.js', 'Gruntfile.js');
         this.template('_jshintrc', '.jshintrc');
         this.template('_package.json', 'package.json');

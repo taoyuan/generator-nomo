@@ -24,7 +24,6 @@
     "test": "./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
-    "npm-name": "^1.0.1",
     "yeoman-generator": "^0.17.3"
   },
   "devDependencies": {

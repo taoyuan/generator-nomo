@@ -9,17 +9,18 @@ describe('nomo generator', function () {
     this.timeout(10000);
 
     beforeEach(function (done) {
+        var test = this;
         helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
             if (err) {
                 return done(err);
             }
 
-            this.app = helpers.createGenerator('nomo:app', [
+            test.app = helpers.createGenerator('nomo:app', [
                 '../../app'
             ]);
-            this.app.options['skip-install'] = true;
+            test.app.options['skip-install'] = true;
             done();
-        }.bind(this));
+        });
     });
 
     it('creates expected files', function (done) {
@@ -39,7 +40,6 @@ describe('nomo generator', function () {
         helpers.mockPrompt(this.app, {
             'name': 'mymodule',
             'description': 'awesome module',
-            'pkgName': false,
             'license': 'MIT',
             'homepage': 'http://yeoman.io',
             'githubUsername': 'octocat',

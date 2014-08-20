@@ -1,7 +1,7 @@
 {
   "name": "<%= slugname %>",
   "version": "<%= props.version %>",
-  "main": "lib/<%= slugname %>.js",
+  "main": "index.js",
   "description": "<%= props.description %>",<% if (props.homepage) { %>
   "homepage": "<%= props.homepage %>",<% } %>
   "bugs": "<%= repoUrl %>/issues",
