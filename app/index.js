@@ -136,7 +136,7 @@ module.exports = yeoman.generators.Base.extend({
         this.template('_package.json', 'package.json');
         this.template('_README.md', 'README.md');
 
-        if (this.props.cli === 'yes' || this.props.cli) {
+        if (this.props.cli === 'yes' || this.props.cli === 'y') {
             this.template('_cli.js', 'cli.js');
         }
     },
