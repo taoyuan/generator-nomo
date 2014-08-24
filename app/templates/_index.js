@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports = require('lib/<%= slugname %>');
+module.exports = require('./lib/<%= slugname %>');
