@@ -28,11 +28,9 @@ $ grunt browserify
 ```
 <%}%>
 
-
 ## Documentation
 
 _(Coming soon)_
-
 
 ## Examples
 
