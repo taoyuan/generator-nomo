@@ -19,9 +19,6 @@
       "type": "<%= props.license %>"
     }
   ],
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "<%= slugname %>"<% for (var i = 0; i < keywords.length; i++) { %>,
     "<%= keywords[i] %>"<% } %>

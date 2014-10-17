@@ -1,9 +1,9 @@
 {
-  "curly": true,
+  "curly": fasle,
   "eqeqeq": true,
   "immed": true,
-  "latedef": true,
-  "newcap": true,
+  "latedef": fasle,
+  "newcap": false,
   "noarg": true,
   "sub": true,
   "undef": true,
@@ -12,7 +12,6 @@
   "eqnull": true,
   "node": true,
   "globals"   : {
-      /* MOCHA */
       "describe": false,
       "it": false,
       "suite": false,
