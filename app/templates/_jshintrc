@@ -1,8 +1,8 @@
 {
-  "curly": fasle,
+  "curly": false,
   "eqeqeq": true,
   "immed": true,
-  "latedef": fasle,
+  "latedef": false,
   "newcap": false,
   "noarg": true,
   "sub": true,
