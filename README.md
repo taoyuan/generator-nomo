@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/taoyuan/generator-nomo.svg?branch=master)](https://travis-ci.org/taoyuan/generator-nomo)
 [![Dependency Status](https://david-dm.org/taoyuan/generator-nomo.svg?theme=shields.io)](https://david-dm.org/taoyuan/generator-nomo)
-[![devDependency Status](https://david-dm.org/taoyuan/generator-nomo/dev-status.svg?theme=shields.io)](https://david-dm.org/taoyuan/generator-nomo#info=devDependencies)
+[![devDependency Status](https://david-dm.org/taoyuan/generator-nomo/dev-status.svg?theme=shields.io)](https://david-dm.org/taoyuan/generator-nomo#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/taoyuan/generator-nomo.svg)](https://greenkeeper.io/)
 
 > Create a node.js module with [Yeoman](http://yeoman.io/), including Mocha unit tests, with the assertion library of your choice.
 
